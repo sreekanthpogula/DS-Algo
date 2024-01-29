@@ -100,7 +100,6 @@ class LinkedList:
         self.head = rest
         return self
 
-    # Helper method with proper naming convention
     def _reverse_linked_list(self, head):
         if head is None or head.next is None:
             return head
@@ -123,17 +122,17 @@ class Node:
 
 
 l_list = LinkedList()
-print(l_list)
+print("Linkedlist", l_list)
 
 first_node = Node("a")
 l_list.head = first_node
-print(l_list)
+print("Linkedlist with head", l_list)
 
 second_node = Node("b")
 third_node = Node("c")
 first_node.next = second_node
 second_node.next = third_node
-print(l_list)
+print("Linkedlist with updated node values", l_list)
 
 llist = LinkedList(["a", "b", "c", "d", "e"])
 print(llist)
@@ -152,39 +151,32 @@ print(llist)
 llist.add_last(Node("f"))
 print(llist)
 
-# llist = LinkedList()
-# print(llist)
 llist.add_after("a", Node("b"))
 llist = LinkedList(["a", "b", "c", "d"])
-# print(llist)
+
 llist.add_after("c", Node("cc"))
-# print(llist)
-# llist.add_after("f", Node("g"))
-# print(llist)
 
-
-# llist1 = LinkedList()
-# print(llist1)
 llist.add_before("b", Node("aa"))
 print(llist)
 llist.add_before("c", Node("bb"))
 print(llist)
-# llist.add_before("n", Node("m"))
-# print(llist)
 
-llist = LinkedList()
-print(llist)
 llist = LinkedList(["a", "b", "c", "d", "e"])
 print(llist)
 llist.remove_node("a")
 print(llist)
-# llist.remove_node("a")
-# print(llist)
 
 head = LinkedList(["1", "2", "3", "4", "5"])
 print(head)
+
 new_head = LinkedList.reverse_linked_list(head)
 print(new_head)
+
+llist = LinkedList(["a", "b", "c", "d", "e"])
+# print(LinkedList.__iter__(llist))
+
+for node in llist:
+    print(node)
 
 
 
