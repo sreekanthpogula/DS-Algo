@@ -1,6 +1,7 @@
 class Myclass:
-    def __init__(self, value):
+    def __init__(self, value, value1):
         self.value = value
+        self.value1 = value1
 
     def __str__(self):
         return f"Myclass instance with the value: {self.value}"
@@ -44,7 +45,7 @@ class Myclass:
         print(f"calling with args:{args}, kwargs: {kwargs}")
 
 
-obj1 = Myclass(23)
+obj1 = Myclass(23, 23)
 print(str(obj1))
 print(repr(obj1))
 print(len(obj1))
